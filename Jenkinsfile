@@ -1,5 +1,9 @@
 pipeline {
     agent none
+    environment {
+        TEST = "test value"
+        TEST1 = "test value1"
+    }
     stages {
         
         stage('Build') {
@@ -8,20 +12,22 @@ pipeline {
             }
 
             steps{
-                sh 'sleep 5'
+                sh '''
+                sleep 5
+                echo $TEST $TEST1
+                '''
                 }
          
         }
     
         stage('Test') {
             agent any
-            
+
             steps{
                 sh '''
                     #!/bin/bash
                     ls
-                    pwd
-                    uptime
+                    echo $TEST $TEST1
                     sleep 10
                 '''
             }
