@@ -14,9 +14,8 @@ pipeline {
         }
     
         stage('Test') {
-            agent {
-                label 'slave2'
-            }
+            agent any
+            
             steps{
                 sh '''
                     #!/bin/bash
