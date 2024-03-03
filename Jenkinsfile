@@ -14,6 +14,8 @@ pipeline {
                 sh '''
                     #!/bin/bash
                     ls
+                    pwd
+                    uptime
                     sleep 10
                 '''
             }
