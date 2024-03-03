@@ -15,7 +15,7 @@ pipeline {
                 sh '''
                     #!/bin/bash
                     ls
-                    sleep
+                    sleep 10
                 '''
             }
 
