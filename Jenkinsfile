@@ -8,7 +8,6 @@ pipeline {
                 sh 'sleep 5'
                 }
          
-
         }
     
         stage('Test') {
